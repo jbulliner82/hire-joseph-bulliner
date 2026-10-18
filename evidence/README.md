@@ -1,32 +1,27 @@
-# Joseph Bulliner — Evidence Portfolio / October 2026
+# Joseph Bulliner — Evidence Lab
 
-This package is an applicant-owned, reproducible set of **independent demonstration projects** for recruiters and technical reviewers. It complements Joseph Bulliner's existing public GitHub profile and hiring portfolio.
+**Published:** October 18, 2026. **Status:** working independent career-portfolio demonstrations, not employer work or production deployments.
 
-## Start here
+## Try the interactive work
+- [Evidence Lab landing page](index.html)
+- [Parcel Evidence Lab](parcel-lab.html) — eight fictional properties, filtering, source-gap checklist, deterministic score and JSON export.
+- [Leadership Under Pressure](learning-lab.html) — three decision scenarios with answer feedback, score and retake.
 
-1. Open `site/index.html` in Chrome, Safari, Firefox, or Edge (or serve the folder locally with `python -m http.server 8000`).
-2. Explore `site/parcel-lab.html` and `site/learning-lab.html` without credentials.
-3. From the `automation/` directory, execute:
+## Reproduce the technical results
+- [Automation source and instructions](automation/)
+- [Python source](automation/clean_pipeline.py)
+- [Ten unit tests](automation/tests/test_clean_pipeline.py)
+- [Seeded synthetic dataset](automation/data/sample_leads.csv)
+- [Baseline QA report](automation/results/qa_report.json)
 
-   ```sh
-   python clean_pipeline.py --out results
-   python -m pytest -q
-   ```
+Local verification on the seeded dataset: **240 rows processed; 187 accepted; 53 quarantined; 10 pytest tests passed.** A GitHub Actions test workflow is configured at [.github/workflows/evidence-qa.yml](../.github/workflows/evidence-qa.yml); check its actual run status before claiming hosted CI success.
 
-4. Review `docs/TECHNICAL_CASE_STUDIES.md`, `docs/LEARNING_DESIGN_CASE_STUDY.md`, screenshots and the tailored resume files.
+## Documentation
+- [Instructional design / outcomes alignment and evaluation plan](docs/LEARNING_DESIGN_CASE_STUDY.md)
+- [Technical case studies and evidence boundaries](docs/TECHNICAL_CASE_STUDIES.md)
+- [Existing ShowUp ML prototype](https://github.com/jbulliner82/showup-appointment-predictor)
 
-## Verified in this build
-- The standalone Python data-quality pipeline completed a controlled run against 240 seeded, artificial records.
-- Ten pytest tests passed in the local environment.
-- Browser screenshots were captured from executable demo HTML via headless Chromium (see `assets/screenshots`).
+## Important limits
+All new property and pipeline data is **fictional/synthetic**. These demos do not validate actual parcel conditions, employee learning gains, enterprise production use, customer adoption, business savings, or clinical impact. Browser screenshots and updated application-specific resumes are in the downloadable career-portfolio package prepared October 2026.
 
-## No invented outcomes
-No business revenue, payroll savings, enterprise deployment, customer adoption, employee learning gains, clinical outcomes, or live property validation is represented by this kit. Its metrics are sample/test outcomes. Existing GitHub work is separate and is not rewritten as client work.
-
-## Public profile
-- GitHub: https://github.com/jbulliner82
-- Existing hiring site: https://jbulliner82.github.io/hire-joseph-bulliner/
-- Existing ML demonstration: https://github.com/jbulliner82/showup-appointment-predictor
-
-## Safe publication
-Avoid adding personal addresses, phone numbers, credentials, API keys, employer records, real customers' private data or healthcare data to a public repository. This package uses fictional examples and can be republished safely after manual review.
+**Author:** Joseph Bulliner · [GitHub profile](https://github.com/jbulliner82) · [Professional hiring site](https://jbulliner82.github.io/hire-joseph-bulliner/)
