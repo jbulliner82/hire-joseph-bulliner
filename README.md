@@ -41,6 +41,10 @@ Comprehensive overview of my background, combining:
 - Regulatory documentation and compliance
 - Customer-facing problem solving
 
+### **Verified evidence demos**
+
+See the [interactive Evidence Lab](evidence/index.html) and the [reproducible Python tests](evidence/automation/), added October 2026. All new test data is synthetic; no enterprise performance gains are claimed.
+
 ### **Featured Projects**
 
 **Six detailed project showcases:**
@@ -62,7 +66,7 @@ Three comprehensive technical breakdowns:
 
 ### **Professional Experience**
 
-**Current:** Regular Package Car Driver (RPCD) at UPS (2020–Present)  
+**Former:** Regular Package Car Driver (RPCD) at UPS (2020–2026)  
 Working with safety-regulated logistics, digital tracking systems, and route optimization
 
 **Previous Roles:**
