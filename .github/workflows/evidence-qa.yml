@@ -1,0 +1,31 @@
+name: Evidence portfolio — Python QA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'evidence/automation/**'
+      - '.github/workflows/evidence-qa.yml'
+  pull_request:
+    paths:
+      - 'evidence/automation/**'
+      - '.github/workflows/evidence-qa.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install test dependency
+        run: python -m pip install pytest
+      - name: Run 10 unit tests
+        run: python -m pytest evidence/automation/tests -q
+      - name: Reproduce sample dataset quality report
+        run: python evidence/automation/clean_pipeline.py --input evidence/automation/data/sample_leads.csv --out /tmp/portfolio-evidence
